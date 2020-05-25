@@ -1,13 +1,12 @@
 import React, { Component, useContext } from 'react';
 import HomeImg from './assets/images/BooksImg.svg';
+import OpenFile from './components/OpenFile';
 import './assets/styles/App.css';
 import {
   Provider as AuthProvider,
   Context,
 } from './components/contexts/AuthContext';
 const App = () => {
-  // const { signInWithGoogle } = useContext(Context);
-  // console.log();
   return (
     <AuthProvider>
       <Context.Consumer>
@@ -21,9 +20,7 @@ const App = () => {
                   <button id="logIn" onClick={signInWithGoogle}>
                     Iniciar Sesión
                   </button>
-                  <button id="upLoadFile">
-                    <input type="file" />
-                  </button>
+                  <OpenFile />
                   <button id="goFiles">Ver archivos</button>
                 </div>
               </div>
